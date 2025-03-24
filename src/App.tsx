@@ -66,7 +66,7 @@ export const App = () => {
       title: titleValue,
       userId: selectPerson,
       id: newId,
-      completed: true,
+      completed: false,
     };
 
     const titleCon = !titleValue;
@@ -87,7 +87,6 @@ export const App = () => {
     if (!titleCon && !selectCon) {
       setErrorS(false);
       setTitleError(false);
-      findMaxId([...todosServer]);
       setNewId(prev => prev + 1);
       setTodosServer(prevState => [...prevState, newTodo]);
     }

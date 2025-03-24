@@ -15,17 +15,14 @@ export const UserInfo: React.FC<Props> = ({
   errors,
   onErrors,
 }) => {
-  // const [selectError, setSelectError] = useState(false);
   const [selectedUser, setSelectedUser] = useState<number>(0);
 
   const selectValidation = (selectItem: number) => {
     setSelectedUser(selectItem);
 
     if (selectItem === 0) {
-      // setSelectError(true);
       onErrors(true);
     } else {
-      // setSelectError(false);
       onErrors(false);
     }
 
